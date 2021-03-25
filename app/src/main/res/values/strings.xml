@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CreditCard</string>
+    <string name="capture">Capturar</string>
+    <string name="card_number">Card number</string>
+</resources>

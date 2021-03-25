@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".MainActivity">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="6dp"
+            android:padding="6dp"
+            android:textSize="20sp"
+            android:hint="@string/card_number"
+            android:maxLength="16"
+            android:gravity="center"
+            android:background="@color/purple_200"
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/newres"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:inputType="phone"
+            android:typeface="monospace"
+            mask:allowed_chars="0123456789"
+            mask:mask="####-####-####-####" />
+
+        <Button
+            android:id="@+id/btCalculate"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:background="#4CAF50"
+            android:text="@string/capture"
+            android:textSize="18sp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+</LinearLayout>
